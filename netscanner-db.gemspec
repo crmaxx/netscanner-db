@@ -1,12 +1,12 @@
 $:.push File.expand_path('../lib', __FILE__)
 
 # Maintain your gem's version:
-require 'netscanner/version'
+require 'netscan/version'
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = 'netscanner-db'
-  s.version     = Netscanner::VERSION
+  s.version     = Netscan::VERSION
   s.authors     = ['Maxim Zhukov']
   s.email       = ['crmaxx@gmail.com']
   s.homepage    = 'https://github.com/crmaxx/netscanner-db'
@@ -16,8 +16,16 @@ Gem::Specification.new do |s|
 
   s.files = Dir['{app,config,db,lib}/**/*'] + ['Rakefile']
   s.require_paths = %w{app/models lib}
+
   s.required_ruby_version = '>= 2.1'
-  s.add_runtime_dependency 'railties'
+
+  s.add_runtime_dependency 'aasm'
+
+  rails_version_constraints = '>= 4.2.1'
+
+  s.add_runtime_dependency 'activerecord', rails_version_constraints
+  s.add_runtime_dependency 'activesupport', rails_version_constraints
+  s.add_runtime_dependency 'railties', rails_version_constraints
 
   if RUBY_PLATFORM =~ /java/
     s.add_runtime_dependency 'jdbc-postgres'

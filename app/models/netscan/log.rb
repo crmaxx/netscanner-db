@@ -1,6 +1,6 @@
-class Netscanner::Log < ActiveRecord::Base
+class Netscan::Log < ActiveRecord::Base
   belongs_to :job,
-             class_name: "Netscanner::Job",
+             class_name: "Netscan::Job",
              inverse_of: :logs
 
   belongs_to :host,

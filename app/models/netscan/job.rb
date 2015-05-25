@@ -1,20 +1,20 @@
 require "aasm"
 
-class Netscanner::Job < ActiveRecord::Base
+class Netscan::Job < ActiveRecord::Base
   include AASM
 
   has_many :logs,
-           class_name: "Netscanner::Log",
+           class_name: "Netscan::Log",
            inverse_of: :jobs
 
   has_many :credentials_jobs,
-           class_name: "Netscanner::CredentialsJob"
+           class_name: "Netscan::CredentialsJob"
   has_many :credentials,
            through: :credentials_jobs,
            class_name: "Metasploit::Credential::Core"
 
   has_many :hosts_jobs,
-           class_name: "Netscanner::HostsJob"
+           class_name: "Netscan::HostsJob"
   has_many :hosts,
            through: :hosts_jobs,
            class_name: "Mdm::Host"
