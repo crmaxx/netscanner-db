@@ -21,11 +21,16 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency 'aasm'
 
-  rails_version_constraints = '>= 4.2.1'
+  rails_version_constraints = ["< 4.0.0", ">= 3.2.21"]
 
-  s.add_runtime_dependency 'activerecord', rails_version_constraints
-  s.add_runtime_dependency 'activesupport', rails_version_constraints
-  s.add_runtime_dependency 'railties', rails_version_constraints
+  s.add_runtime_dependency 'activerecord', *rails_version_constraints
+  s.add_runtime_dependency 'activesupport', *rails_version_constraints
+  s.add_runtime_dependency 'railties', *rails_version_constraints
+
+  s.add_runtime_dependency 'metasploit-concern', '~> 0.5.0'
+  s.add_runtime_dependency 'metasploit-model', '~> 0.30.2'
+  s.add_runtime_dependency 'metasploit_data_models', '~> 0.24.0'
+  s.add_runtime_dependency 'metasploit-credential', '~> 0.14.7'
 
   if RUBY_PLATFORM =~ /java/
     s.add_runtime_dependency 'jdbc-postgres'
