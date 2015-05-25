@@ -1,0 +1,8 @@
+en:
+  activerecord:
+    errors:
+      models:
+        credential/core:
+          attributes:
+            base:
+              minimum_presence: "can't have private and public blank - at least one must be present."
