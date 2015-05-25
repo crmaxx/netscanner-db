@@ -3,8 +3,6 @@ require "aasm"
 class Netscanner::Job < ActiveRecord::Base
   include AASM
 
-  self.table_name = "netscanner_jobs"
-
   has_many :logs,
            class_name: "Netscanner::Log",
            inverse_of: :jobs
