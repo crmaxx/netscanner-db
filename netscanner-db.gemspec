@@ -30,7 +30,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'metasploit-concern', '~> 0.5.0'
   s.add_runtime_dependency 'metasploit-model', '~> 0.30.2'
   s.add_runtime_dependency 'metasploit_data_models', '~> 0.24.0'
-  s.add_runtime_dependency 'metasploit-credential', '~> 0.14.7'
+  s.add_runtime_dependency 'metasploit-credential', '~> 0.14.5'
 
   if RUBY_PLATFORM =~ /java/
     s.add_runtime_dependency 'jdbc-postgres'
