@@ -28,7 +28,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'railties', *rails_version_constraints
 
   s.add_runtime_dependency 'metasploit-concern', '~> 0.5.0'
-  s.add_runtime_dependency 'metasploit-model', '~> 0.30.2'
+  s.add_runtime_dependency 'metasploit-model', '~> 0.29.0'
   s.add_runtime_dependency 'metasploit_data_models', '~> 0.24.0'
   s.add_runtime_dependency 'metasploit-credential', '~> 0.14.5'
 
